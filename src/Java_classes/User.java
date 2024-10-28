@@ -1,8 +1,11 @@
 package Java_classes;
 
-public class User extends Account{
-    public User(int _id, String _name){
-        id = _id;
-        name = _name;
+abstract class User{
+    protected int id;
+    protected String name;
+    public User(int id, String name){
+        this.id = id;
+        this.name = name;
     }
+    public abstract void performOperation(Operation operation);
 }
